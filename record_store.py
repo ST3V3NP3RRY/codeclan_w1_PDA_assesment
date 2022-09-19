@@ -59,30 +59,28 @@ def get_records_store_stock_number(record_store):
     print(f"We currently have {current_stock} records in stock")
 
 
-get_records_store_stock_number(record_store)
+# get_records_store_stock_number(record_store)
 
 # Get a list of Artists in record_store
 def get_list_of_artists(record_store):
     artist_list = []
     for record in record_store["records"]:
         artist_list.append(record["artist"])
-    print(artist_list)
+    return artist_list
 
 
-get_list_of_artists(record_store)
-
-# Get album releases in a certain year
-def get_record_by_year_released(record_store, year):
-    for record in record_store["records"]:
-        if record["year_released"] == year:
-            return record["artist"]
-            print(record["artist"])
-    pass
-
-
-# This isn't working WHY?????
-
-# get_record_by_year_released(record_store, 1979)
+# print(get_list_of_artists(record_store))
 
 
 # IS a record in stock?
+
+
+def find_if_record_in_stock(record_store, record_name):
+    for record in record_store["records"]:
+        if record_name == record["record_name"]:
+            print(f"{record_name} is in stock")
+
+
+find_if_record_in_stock(
+    record_store, "The Rise and Fall of Ziggy Stardust and the Spiders From Mars"
+)
