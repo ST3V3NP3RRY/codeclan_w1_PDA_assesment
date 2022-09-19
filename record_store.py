@@ -69,12 +69,6 @@ def get_list_of_artists(record_store):
     return artist_list
 
 
-# print(get_list_of_artists(record_store))
-
-
-# IS a record in stock?
-
-
 def find_if_record_in_stock(record_store, record_name):
     for record in record_store["records"]:
         if record_name == record["record_name"]:
