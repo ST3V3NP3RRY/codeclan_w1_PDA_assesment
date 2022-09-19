@@ -59,7 +59,8 @@ def get_records_store_stock_number(record_store):
     print(f"We currently have {current_stock} records in stock")
 
 
-# get_records_store_stock_number(record_store)
+get_records_store_stock_number(record_store)
+print("-------------------------------------------")
 
 # Return a list of all the artists in the record store
 def get_list_of_artists(record_store):
@@ -68,6 +69,9 @@ def get_list_of_artists(record_store):
         artist_list.append(record["artist"])
     return artist_list
 
+
+print(get_list_of_artists(record_store))
+print("-------------------------------------------")
 
 # Find out if a record is in stock by name
 def find_if_record_in_stock(record_store, record_name):
