@@ -51,7 +51,7 @@ record_store = {
         },
     ]
 }
-# Get numer of records in stock
+# Create a function to get the number of records in stock
 def get_records_store_stock_number(record_store):
     current_stock = 0
     for record in record_store["records"]:
@@ -61,7 +61,7 @@ def get_records_store_stock_number(record_store):
 
 # get_records_store_stock_number(record_store)
 
-# Get a list of Artists in record_store
+# Return a list of all the artists in the record store
 def get_list_of_artists(record_store):
     artist_list = []
     for record in record_store["records"]:
@@ -69,6 +69,7 @@ def get_list_of_artists(record_store):
     return artist_list
 
 
+# Find out if a record is in stock by name
 def find_if_record_in_stock(record_store, record_name):
     for record in record_store["records"]:
         if record_name == record["record_name"]:
